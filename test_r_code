@@ -1,0 +1,32 @@
+m = 15,000
+ti = 10
+
+Queue = numeric(m)
+NumCars = numeric(ti)
+
+par(mfrow = c(1,2))
+
+for(k in 1:2) {
+  emptyQueues = 0
+  overOneQueues = 0
+  if(k == 1) {
+    alpha <- c(659,934,991,999)
+  }
+  else {
+    alpha <- c(249,595,836,947,986,996,999)
+  }
+  for(j in 1:15,000) {
+    for(i in 1:20) {
+      z = runif(1, 0, 999)
+      for(e in 1:length(alpha)) {
+        if(z < alpha[e]) {
+          NumCars[i] = e - 1
+          break
+        } else if (e == length()) {
+          
+        }
+      }
+    }
+  }
+  }
+}
